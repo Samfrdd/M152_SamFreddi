@@ -40,10 +40,10 @@
     <!-- /sidebar -->
 
     <!-- main right col -->
-    <div class="column col-sm-10 col-xs-11" id="main">
+    <div class="column col-sm-10 col-xs-11 " id="main">
 
         <!-- top nav -->
-        <div class="navbar navbar-blue navbar-static-top">
+        <div class="navbar navbar-blue ">
             <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle</span>
@@ -79,30 +79,30 @@
                                 class="glyphicon glyphicon-user"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="">More</a></li>
-                            <li><a href="">More</a></li>
-                            <li><a href="">More</a></li>
-                            <li><a href="">More</a></li>
-                            <li><a href="">More</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
+        <div class="well ">
 
-        <div class="well">
-            <form class="form-horizontal" role="form">
-                <h4>What's New</h4>
+            <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+                <h4>Poster ici !</h4>
                 <div class="form-group" style="padding:14px;">
-                    <textarea class="form-control" placeholder="Update your status"></textarea>
+                    <textarea class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
                 </div>
-                <button class="btn btn-primary pull-right" type="button">Post</button>
-                <ul class="list-inline">
-                    <li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li>
-                    <li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li>
-                </ul>
+                <input type="submit"  class="btn btn-primary pull-right" name="post" value="post">
+              
+                <div class="form-group">
+                    <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
+                    <input type="file" name="img[]" id="img" multiple  accept="image/*">
+                </div>
+             
             </form>
         </div>
+    </div>
+
+      
 
 </body>
 
