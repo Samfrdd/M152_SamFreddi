@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post </title>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+    <link href="./vue/css/bootstrap.css" rel="stylesheet">
+	<!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-    <link href="assets/css/facebook.css" rel="stylesheet">
+	<link href="./vue/css/facebook.css" rel="stylesheet">
 </head>
 
 <body>
@@ -65,10 +65,10 @@
                 </form>
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="./home.html"><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a href="?page=home"><i class="glyphicon glyphicon-home"></i> Home</a>
                     </li>
                     <li>
-                        <a href="#" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>
+                        <a href="?page=post" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>
                             Post</a>
                     </li>
 
@@ -84,25 +84,32 @@
                 </ul>
             </nav>
         </div>
-        <div class="well ">
+        <div class="padding">
+            <div class="full col-sm-9">
 
-            <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
-                <h4>Poster ici !</h4>
-                <div class="form-group" style="padding:14px;">
-                    <textarea class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
+                <div class="well ">
+
+                    <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+                        <h4>Poster ici !</h4>
+                        <div class="form-group" style="padding:14px;">
+                            <textarea name="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
+                        </div>
+                        <input type="submit" class="btn btn-primary pull-right" name="post" value="post">
+
+                        <div class="form-group">
+                            <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
+                            <input type="file" name="img[]" id="img" multiple accept="image/*">
+                        </div>
+
+                    </form>
                 </div>
-                <input type="submit"  class="btn btn-primary pull-right" name="post" value="post">
-              
-                <div class="form-group">
-                    <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
-                    <input type="file" name="img[]" id="img" multiple  accept="image/*">
-                </div>
-             
-            </form>
+            </div>
+
         </div>
+
     </div>
 
-      
+
 
 </body>
 

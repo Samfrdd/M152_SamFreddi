@@ -6,11 +6,11 @@
 	<meta charset="utf-8">
 	<title>Facebook M152</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="./vue/css/bootstrap.css" rel="stylesheet">
 	<!--[if lt IE 9]>
           <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-	<link href="assets/css/facebook.css" rel="stylesheet">
+	<link href="./vue/css/facebook.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,8 +23,7 @@
 				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
 
 					<ul class="nav">
-						<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i
-									class="glyphicon glyphicon-chevron-right"></i></a></li>
+						<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
 					</ul>
 
 					<ul class="nav hidden-xs" id="lg-menu">
@@ -49,25 +48,22 @@
 				<div class="column col-sm-10 col-xs-11" id="main">
 
 					<!-- top nav -->
-					<div class="navbar navbar-blue navbar-static-top">
+					<div class="navbar navbar-blue ">
 						<div class="navbar-header">
-							<button class="navbar-toggle" type="button" data-toggle="collapse"
-								data-target=".navbar-collapse">
+							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a href="#" class="navbar-brand logo">F</a>
+							<a href="?page=home" class="navbar-brand logo">F</a>
 						</div>
 						<nav class="collapse navbar-collapse" role="navigation">
 							<form class="navbar-form navbar-left">
 								<div class="input-group input-group-sm" style="max-width:360px;">
-									<input class="form-control" placeholder="Search" name="srch-term" id="srch-term"
-										type="text">
+									<input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
 									<div class="input-group-btn">
-										<button class="btn btn-default" type="submit"><i
-												class="glyphicon glyphicon-search"></i></button>
+										<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
 									</div>
 								</div>
 							</form>
@@ -76,20 +72,15 @@
 									<a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
 								</li>
 								<li>
-									<a href="./post.html" role="button" data-toggle="modal"><i
-											class="glyphicon glyphicon-plus"></i> Post</a>
+									<a href="?page=post" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>
+										Post</a>
 								</li>
 
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
-											class="glyphicon glyphicon-user"></i></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
 									<ul class="dropdown-menu">
-										<li><a href="">More</a></li>
-										<li><a href="">More</a></li>
-										<li><a href="">More</a></li>
-										<li><a href="">More</a></li>
 										<li><a href="">More</a></li>
 									</ul>
 								</li>
@@ -108,15 +99,13 @@
 								<div class="col-sm-5">
 
 									<div class="panel panel-default">
-										<div class="panel-thumbnail"><img src="assets/img/bg_5.jpg"
-												class="img-responsive"></div>
+										<div class="panel-thumbnail"><img src="./vue/css/img/bg_5.jpg" class="img-responsive"></div>
 										<div class="panel-body">
 											<p class="lead">Urbanization</p>
 											<p>45 Followers, 13 Posts</p>
 
 											<p>
-												<img src="assets/img/uFp_tsTJboUY7kue5XAsGAs28.png" height="28px"
-													width="28px">
+												<img src="./vue/css/img/uFp_tsTJboUY7kue5XAsGAs28.png" height="28px" width="28px">
 											</p>
 										</div>
 									</div>
@@ -128,20 +117,17 @@
 										</div>
 										<div class="panel-body">
 											<div class="list-group">
-												<a href="http://usebootstrap.com/theme/facebook"
-													class="list-group-item">Modal / Dialog</a>
-												<a href="http://usebootstrap.com/theme/facebook"
-													class="list-group-item">Datetime Examples</a>
-												<a href="http://usebootstrap.com/theme/facebook"
-													class="list-group-item">Data Grids</a>
+												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Modal / Dialog</a>
+												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Datetime Examples</a>
+												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Data Grids</a>
 											</div>
 										</div>
 									</div>
 
-									
-							
 
-								
+
+
+
 
 
 								</div>
@@ -155,21 +141,20 @@
 											<h4>Welcome !!</h4>
 										</div>
 										<div class="panel-body">
-											<p><img src="assets/img/150x150.gif" class="img-circle pull-right"> <a
-													href="#">Bienvenue sur Facebook M152</a></p>
+											<p><img src="./vue/css/img/150x150.gif" class="img-circle pull-right"> <a href="#">Bienvenue sur Facebook M152</a></p>
 											<div class="clearfix"></div>
 											<hr>
 										</div>
 									</div>
 
 
-									
+
 									<!-- <div class="panel panel-default">
 										<div class="panel-heading"><a href="#" class="pull-right">View all</a>
 											<h4>Bootply Editor &amp; Code Library</h4>
 										</div>
 										<div class="panel-body">
-											<p><img src="assets/img/150x150.gif" class="img-circle pull-right"> <a
+											<p><img src="./vue/css/img/150x150.gif" class="img-circle pull-right"> <a
 													href="#">The Bootstrap Playground</a></p>
 											<div class="clearfix"></div>
 											<hr>
@@ -186,7 +171,7 @@
 											<h4>Stackoverflow</h4>
 										</div>
 										<div class="panel-body">
-											<img src="assets/img/150x150.gif" class="img-circle pull-right"> <a
+											<img src="./vue/css/img/150x150.gif" class="img-circle pull-right"> <a
 												href="#">Keyword: Bootstrap</a>
 											<div class="clearfix"></div>
 											<hr>
@@ -226,16 +211,15 @@
 									</div> -->
 
 									<div class="panel panel-default">
-										<div class="panel-thumbnail"><img src="assets/img/bg_4.jpg"
-												class="img-responsive"></div>
+										<div class="panel-thumbnail"><img src="./vue/css/img/bg_4.jpg" class="img-responsive"></div>
 										<div class="panel-body">
 											<p class="lead">Social Good</p>
 											<p>1,200 Followers, 83 Posts</p>
 
 											<p>
-												<img src="assets/img/photo.jpg" height="28px" width="28px">
-												<img src="assets/img/photo.png" height="28px" width="28px">
-												<img src="assets/img/photo_002.jpg" height="28px" width="28px">
+												<img src="./vue/css/img/photo.jpg" height="28px" width="28px">
+												<img src="./vue/css/img/photo.png" height="28px" width="28px">
+												<img src="./vue/css/img/photo_002.jpg" height="28px" width="28px">
 											</p>
 										</div>
 									</div>
@@ -292,8 +276,7 @@
 				<div class="modal-body">
 					<form class="form center-block">
 						<div class="form-group">
-							<textarea class="form-control input-lg" autofocus=""
-								placeholder="What do you want to share?"></textarea>
+							<textarea class="form-control input-lg" autofocus="" placeholder="What do you want to share?"></textarea>
 						</div>
 					</form>
 				</div>
@@ -311,11 +294,11 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="assets/js/jquery.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="./vue/css/js/jquery.js"></script>
+	<script type="text/javascript" src="./vue/css/js/bootstrap.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function () {
-			$('[data-toggle=offcanvas]').click(function () {
+		$(document).ready(function() {
+			$('[data-toggle=offcanvas]').click(function() {
 				$(this).toggleClass('visible-xs text-center');
 				$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
 				$('.row-offcanvas').toggleClass('active');
