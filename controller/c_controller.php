@@ -9,7 +9,7 @@
 * Description : Page controller du site
 */
 
-require_once './modele/modele/db/database.php';
+require_once './modele/db/database.php';
 
 if (!isset($_GET['page'])) {
     require_once './vue/page/home.php';

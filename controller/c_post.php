@@ -1,9 +1,15 @@
 <?php
+require_once './modele/getPost.php';
+
+require_once './modele/insertPost.php';
+
+
 
 $uploads_dir = './vue/imgPost';
 $message = "";
 $erreurMessage = "";
 $dateMessage = "";
+$image = false;
 // Quand on clique sur "Envoyé"
 if (isset($_POST["post"])) {
 
@@ -21,7 +27,9 @@ if (isset($_POST["post"])) {
         }
     }
 
- 
+    if ($erreurMessage == "") {
+        $lastIdPost = ajouterPost($message);
+    }
 
     foreach ($_FILES["img"]["error"] as $key => $error) {
         // Vérifie si le téléchargement du fichier s'est déroulé sans erreur
@@ -37,7 +45,7 @@ if (isset($_POST["post"])) {
                 $lastId = array_key_last($type);
                 $name = uniqid();
 
-
+                $image = true;
 
 
 
@@ -45,16 +53,15 @@ if (isset($_POST["post"])) {
                 // Image original
                 // Déplace le fichier téléchargé vers le répertoire de destination avec un nom unique
                 move_uploaded_file($tmp_name, "$uploads_dir/$name" . "_original." . $type[$lastId]);
+            
+                $resultat = ajouterMedia($name . "_original.", $type[$lastId], $lastIdPost);
             }
         }
     }
 
+    
 
-    require_once './modele/insertPost.php';
-
-    if($erreurMessage == ""){
-        ajouterPost($message, $name . "_original.", $type[$lastId]);
-    }
-
-
+    
+      
+   
 }

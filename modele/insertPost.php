@@ -2,28 +2,35 @@
 
 
 
-function ajouterPost($message, $imgName, $imgType){
-    $sql = "INSERT INTO post
-    (Message)
-    VALUES(:m)";
+function ajouterPost($message)
+{
+    $sql = "INSERT INTO POST
+    (commentaire)
+    VALUES(:c)";
     $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     try {
-        $statement->execute(array(":m" => $message));
+        $statement->execute(array(":c" => $message));
+        $lastInsertedId = EDatabase::lastInsertId();
     } catch (PDOException $e) {
         return false;
     }
 
+    return $lastInsertedId;
+    
+}
+    
+   
 
-    $sql = "INSERT INTO media
-    (nomMedia, typeMedia)
-    VALUES(:nom, :type)";
+
+function ajouterMedia( $imgName, $imgType, $id){
+    $sql = "INSERT INTO MEDIA
+    (nomMedia, typeMedia, idPost)
+    VALUES(:nom, :type, :id)";
     $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     try {
-        $statement->execute(array(":nom" => $imgName, ":type" => $imgType));
+        $statement->execute(array(":nom" => $imgName, ":type" => $imgType, ":id" => $id));
     } catch (PDOException $e) {
         return false;
     }
-
-    // Done
-    return true;
+    return "insertion reussi";
 }

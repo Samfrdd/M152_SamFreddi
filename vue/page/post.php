@@ -94,6 +94,7 @@
                         <div class="form-group" style="padding:14px;">
                             <textarea name="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
                         </div>
+                        <?= $erreurMessage ?>
                         <input type="submit" class="btn btn-primary pull-right" name="post" value="post">
 
                         <div class="form-group">

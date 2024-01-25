@@ -9,7 +9,7 @@
  * @remark Mettre le bon chemin d'accès à votre fichier contenant les constantes
  */
 
-require_once ($_SERVER['DOCUMENT_ROOT'] . '/m152/modele/modele/config/conparam.php');
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/M152/modele/config/conparam.php');
 //require_once ($_SERVER['DOCUMENT_ROOT'] . '/modele/config/conparam.php');
 
 
