@@ -18,6 +18,7 @@ if (isset($_GET['page'])) {
     $name = htmlspecialchars($_GET["page"]);
     switch ($name) {
         case 'home':
+            require_once './controller/c_display.php';
             require_once './vue/page/home.php';
             break;
         case 'post':
