@@ -60,7 +60,8 @@ function getAllPost()
 function getMessageById($id){
     $sql = "SELECT POST.idPost, POST.commentaire, POST.creationDate, POST.modificationDate
     FROM POST
-    WHERE idPost = :i";
+    WHERE idPost = :i
+    ORDER BY POST.creationDate";
     $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     try {
         $statement->execute(array(":i" => $id));

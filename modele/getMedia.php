@@ -15,8 +15,6 @@ class EMedia
         $this->type = $InTypeMedia;
         $this->dateCreation = $InDateCreation;
         $this->idPost = $InIdPost;
-
-
     }
 
     public $id;
@@ -36,7 +34,8 @@ function getAllMedia()
 {
     $tabBlog = array();
     $sql = "SELECT MEDIA.idMedia, MEDIA.nomMedia, MEDIA.typeMedia, MEDIA.creationDate, MEDIA.idPost
-    FROM MEDIA";
+    FROM MEDIA
+    ORDER BY MEDIA.creationDate DESC";
     $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     try {
         $statement->execute();

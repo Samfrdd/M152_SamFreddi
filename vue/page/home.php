@@ -19,36 +19,15 @@
 		<div class="box">
 			<div class="row row-offcanvas row-offcanvas-left">
 
-				<!-- sidebar -->
-				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-
-					<ul class="nav">
-						<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-					</ul>
-
-					<ul class="nav hidden-xs" id="lg-menu">
-
-						<li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
-					</ul>
-
-
-					<!-- tiny only nav-->
-					<ul class="nav visible-xs" id="xs-menu">
-						<li><a href="#featured" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a>
-						</li>
-						<li><a href="#stories" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
-						<li><a href="#" class="text-center"><i class="glyphicon glyphicon-paperclip"></i></a></li>
-						<li><a href="#" class="text-center"><i class="glyphicon glyphicon-refresh"></i></a></li>
-					</ul>
-
-				</div>
-				<!-- /sidebar -->
+		
+				
+				
 
 				<!-- main right col -->
-				<div class="column col-sm-10 col-xs-11" id="main">
+				<div class="column col-sm-12 col-xs-12" id="main">
 
 					<!-- top nav -->
-					<div class="navbar navbar-blue ">
+					<div class="navbar navbar-blue navbar-fixed-top ">
 						<div class="navbar-header">
 							<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 								<span class="sr-only">Toggle</span>
@@ -90,82 +69,34 @@
 					<!-- /top nav -->
 
 					<div class="padding">
-						<div class="full col-sm-9">
+						<div class="full col-sm-12">
 
 							<!-- content -->
 							<div class="row">
 
 								<!-- main col left -->
-								<div class="col-sm-5">
+								<div class="col-sm-4">
 
 									<div class="panel panel-default">
 										<div class="panel-thumbnail"><img src="./vue/css/img/bg_5.jpg" class="img-responsive"></div>
 										<div class="panel-body">
-											<p class="lead">Urbanization</p>
-											<p>45 Followers, 13 Posts</p>
-
-											<p>
-												<img src="./vue/css/img/uFp_tsTJboUY7kue5XAsGAs28.png" height="28px" width="28px">
-											</p>
+											<p class="lead">Sam Freddi</p>
+											<p>203 Followers, 16 Posts</p>
+											
 										</div>
 									</div>
-
-
-									<div class="panel panel-default">
-										<div class="panel-heading"><a href="#" class="pull-right">View all</a>
-											<h4>Bootstrap Examples</h4>
-										</div>
-										<div class="panel-body">
-											<div class="list-group">
-												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Modal / Dialog</a>
-												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Datetime Examples</a>
-												<a href="http://usebootstrap.com/theme/facebook" class="list-group-item">Data Grids</a>
-											</div>
-										</div>
-									</div>
-
-
-
-
 
 
 
 								</div>
 
 								<!-- main col right -->
-								<div class="col-sm-7">
-
-
-									<!-- <div class="panel panel-default">
-										<div class="panel-heading"><a href="#" class="pull-right">View all</a>
-											<h4>Welcome !!</h4>
-										</div>
-										<div class="panel-body">
-											<p><img src="./vue/css/img/150x150.gif" class="img-circle pull-right"> <a href="#">Bienvenue sur Facebook M152</a></p>
-											<div class="clearfix"></div>
-											<hr>
-										</div>
-									</div> -->
-
-
-
-
-
-									<!-- <div class="panel panel-default">
-										<div class="panel-thumbnail"><img src="./vue/css/img/bg_4.jpg" class="img-responsive"></div>
-										<div class="panel-body">
-											<p class="lead">Social Good</p>
-											<p>1,200 Followers, 83 Posts</p>
-
-											<p>
-												<img src="./vue/css/img/photo.jpg" height="28px" width="28px">
-												<img src="./vue/css/img/photo.png" height="28px" width="28px">
-												<img src="./vue/css/img/photo_002.jpg" height="28px" width="28px">
-											</p>
-										</div>
-									</div> -->
+								<div class="col-sm-6">
 
 									<?= $div ?>
+								</div>
+								<div class="col-sm-4 bg-dark">
+
 								</div>
 							</div><!--/row-->
 

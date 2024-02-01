@@ -99,8 +99,10 @@
 
                         <div class="form-group">
                             <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
-                            <input type="file" name="img[]" id="img" multiple accept="image/*">
+                            <input type="file" name="img[]" id="img" multiple accept="image/*,video/* ,audio/*">
                         </div>
+                        <?= $erreurImage ?>
+
 
                     </form>
                 </div>

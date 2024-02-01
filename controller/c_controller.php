@@ -12,6 +12,7 @@
 require_once './modele/db/database.php';
 
 if (!isset($_GET['page'])) {
+    require_once './controller/c_display.php';
     require_once './vue/page/home.php';
 }
 if (isset($_GET['page'])) {
