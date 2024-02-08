@@ -32,7 +32,8 @@ function getAllPost()
 {
     $tabBlog = array();
     $sql = "SELECT POST.idPost, POST.commentaire, POST.creationDate, POST.modificationDate
-    FROM POST";
+    FROM POST
+    ORDER BY POST.creationDate DESC";
     $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     try {
         $statement->execute();

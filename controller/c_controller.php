@@ -12,6 +12,8 @@
 require_once './modele/db/database.php';
 
 if (!isset($_GET['page'])) {
+    require_once './controller/c_supression.php';
+    require_once './controller/c_modification.php';
     require_once './controller/c_display.php';
     require_once './vue/page/home.php';
 }
@@ -19,6 +21,8 @@ if (isset($_GET['page'])) {
     $name = htmlspecialchars($_GET["page"]);
     switch ($name) {
         case 'home':
+            require_once './controller/c_supression.php';
+            require_once './controller/c_modification.php';
             require_once './controller/c_display.php';
             require_once './vue/page/home.php';
             break;
@@ -26,8 +30,5 @@ if (isset($_GET['page'])) {
             require_once './controller/c_post.php';
             require_once './vue/page/post.php';
             break;
-    
     }
 }
-
-

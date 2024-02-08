@@ -362,7 +362,19 @@ img {
 .img-responsive {
     display: block;
     height: auto;
-    max-width: 100%
+    max-height: 120px;
+}
+
+.video-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.audio-responsive {
+    display: block;
+    height: auto;
+    max-height: 120px;
 }
 
 .img-rounded {
