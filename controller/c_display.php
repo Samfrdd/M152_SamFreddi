@@ -45,7 +45,6 @@ foreach ($allPost as $key => $post) {
             $div .= '<source class="" src="' . $chemin . $media->nom . $media->type . '" type="video/' . $media->type . '">';
             $div .= '</video>';
             $div .= '</div>';
-           
         } else if (in_array($media->type, $audio_mime_types)) {
 
             $div .= '<div class="media">';
@@ -56,16 +55,10 @@ foreach ($allPost as $key => $post) {
 
             $div .= '  </audio>';
             $div .= '  </div>';
-
-         
         } else {
 
             $div .= '<div class="img-thumbnail"><img src="' . $chemin . $media->nom . $media->type . '" class="img-responsive"></div>';
-    
-
-            
         }
-       
     }
     $div .= '</div>';
 
@@ -74,10 +67,13 @@ foreach ($allPost as $key => $post) {
     $div .= '<p>' . $post->dateCreation . '</p>';
     $div .= '</div>';
 
-    $div .= '<form action="#" method="POST"> <input type="submit" name="delete" value="supprimer"></input>';
-    $div .= '<input type="hidden" name="idPost" value="'.$post->id.'"></input>';
+    $div .= '<form action="#" method="POST"><button type="submit" class="btn-icon" name="delete" value="delete"><i class="fa-solid fa-circle-xmark"></i></button>';
+    $div .= '<input type="hidden" name="idPost" value="' . $post->id . '"></input>';
     $div .= '</form>';
 
-    $div .= '<form action="#" method="POST"> <input type="submit" name="modifier" value="modifier"></input></form>';
+
+
+    $div .= '<a class="btn" href="?page=modification&id=' . $post->id . '" role="button" data-toggle="modal"><i class="fa-solid fa-pen"></i>';
+
     $div .= '</div>';
 }

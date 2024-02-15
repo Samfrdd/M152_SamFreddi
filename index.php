@@ -19,6 +19,7 @@ require_once './controller/c_controller.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/564f88f436.js" crossorigin="anonymous"></script>
 </head>
 
 </html>

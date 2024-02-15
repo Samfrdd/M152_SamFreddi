@@ -55,8 +55,6 @@ if (isset($_POST["post"])) {
             if ($sumFichier < $MAX_POST_SIZE) {
                 if ($_FILES["img"]["size"][$key] < $MAX_FILE_SIZE) {
                     // Vérifie le type d'image en utilisant exif_imagetype
-
-
                     if (exif_imagetype($tmp_name) != false || in_array($_FILES["img"]["type"][$key], $video_mime_types) || in_array($_FILES["img"]["type"][$key], $audio_mime_types)) {
                         // Génère un nom unique pour le fichier
                         $name = $_FILES["img"]["name"][$key];
@@ -65,9 +63,6 @@ if (isset($_POST["post"])) {
                         $name = uniqid();
 
                         $image = true;
-
-
-
 
                         $lien_image_original = $uploads_dir . "/" . $name . "_original." . $type[$lastId];
                         // Image original
@@ -116,13 +111,11 @@ if (isset($_POST["post"])) {
     }
 
     if ($lastIdPost) {
-
         foreach ($isMoved as $key => $value) {
             if (!$value) {
                 $erreur = true;
             }
         }
-
 
         if ($erreur) {
             EDatabase::rollback();

@@ -53,6 +53,28 @@ function getAllMedia()
     return $tabBlog;
 }
 
+function GetMEdiaByIdMedia($idMedia){
+    $tabBlog = array();
+    $sql = "SELECT MEDIA.idMedia, MEDIA.nomMedia, MEDIA.typeMedia, MEDIA.creationDate, MEDIA.idPost
+    FROM MEDIA
+    WHERE MEDIA.idMedia = :id";
+    $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    try {
+        $statement->execute(array(":id" => $idMedia));
+    } catch (PDOException $e) {
+        return false;
+    }
+    // On parcoure les enregistrements 
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)) {
+        // On crée l'objet EClient en l'initialisant avec les données provenant
+        // de la base de données
+        $tabBlog = new EMedia($row['idMedia'], $row['nomMedia'],$row['typeMedia'], $row['creationDate'], $row['idPost']);
+        // On place l'objet EClient créé dans le tableau
+    }
+    // Done
+    return $tabBlog;
+}
+
 function getMediaByIdPost($idPost){
     $tabBlog = array();
     $sql = "SELECT MEDIA.idMedia, MEDIA.nomMedia, MEDIA.typeMedia, MEDIA.creationDate, MEDIA.idPost

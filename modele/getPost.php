@@ -59,6 +59,7 @@ function getAllPost()
  * @return EPost $c;
  */
 function getMessageById($id){
+    $c = "";
     $sql = "SELECT POST.idPost, POST.commentaire, POST.creationDate, POST.modificationDate
     FROM POST
     WHERE idPost = :i

@@ -41,7 +41,7 @@
                 </form>
                 <ul class="nav navbar-nav">
                     <li>
-                    <a href="?page=home"role="button" data-toggle="modal"><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a href="?page=home"role="button" data-toggle="modal"><i class="glyphicon glyphicon-home"></i> Home</a>
                     </li>
                     <li>
                         <a href="?page=post" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>
@@ -64,29 +64,32 @@
             <div class="full col-sm-12">
                 <div class="well ">
                     <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
-                        <h4>Poster ici !</h4>
+                        <h4>Modifiez votre post ici !</h4>
                         <div class="form-group" style="padding:14px;">
-                            <textarea name="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
+                            <textarea name="message" class="form-control" ><?= $message->commentaire ?></textarea>
                         </div>
-                        <?= $erreurMessage ?>
-                        <input type="submit" class="btn btn-primary pull-right" name="post" value="post">
+
+                        <input type="submit" class="btn btn-primary pull-right" name="saveText" value="Sauvegarder">
 
                         <div class="form-group">
+                            <label>Ajouter des photo !</label>
                             <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
                             <input type="file" name="img[]" id="img" multiple accept="image/*,video/* ,audio/*">
                         </div>
-                        <?= $erreurImage ?>
-
 
                     </form>
                 </div>
             </div>
 
+
+        <div>
+            <h3>Modification des photos</h3>
+            <?= $div  ?>
+        </div>
+
         </div>
 
     </div>
-
-
 
 </body>
 

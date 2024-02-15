@@ -48,7 +48,7 @@
 							</form>
 							<ul class="nav navbar-nav">
 								<li>
-									<a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+								<a href="?page=home"role="button" data-toggle="modal"><i class="glyphicon glyphicon-home"></i> Home</a>
 								</li>
 								<li>
 									<a href="?page=post" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i>
