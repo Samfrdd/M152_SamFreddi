@@ -69,7 +69,7 @@
                             <textarea name="message" class="form-control" ><?= $message->commentaire ?></textarea>
                         </div>
 
-                        <input type="submit" class="btn btn-primary pull-right" name="saveText" value="Sauvegarder">
+                        <input type="submit" class="btn btn-primary pull-right" name="modify" value="Sauvegarder">
 
                         <div class="form-group">
                             <label>Ajouter des photo !</label>
@@ -79,6 +79,10 @@
 
                     </form>
                 </div>
+                <?= $erreurMessage ?>
+                <?= $erreurImage ?>
+
+                
             </div>
 
 

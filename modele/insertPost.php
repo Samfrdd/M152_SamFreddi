@@ -16,13 +16,13 @@ function ajouterPost($message)
     }
 
     return $lastInsertedId;
-    
 }
-    
-   
 
 
-function ajouterMedia( $imgName, $imgType, $id){
+
+
+function ajouterMedia($imgName, $imgType, $id)
+{
     $sql = "INSERT INTO MEDIA
     (nomMedia, typeMedia, idPost)
     VALUES(:nom, :type, :id)";
@@ -33,4 +33,19 @@ function ajouterMedia( $imgName, $imgType, $id){
         return false;
     }
     return "insertion reussi";
+}
+
+function modifierPost($idPost, $message)
+{
+    $sql = "UPDATE POST
+    SET commentaire=:m
+    WHERE POST.idPost=:i";
+
+    $statement = EDatabase::prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    try {
+        $statement->execute(array(":i" => $idPost, ":m" => $message));
+    } catch (PDOException $e) {
+        return false;
+    }
+    return true;
 }

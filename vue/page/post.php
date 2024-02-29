@@ -63,13 +63,13 @@
         <div class="padding">
             <div class="full col-sm-12">
                 <div class="well ">
-                    <form class="form-horizontal" role="form" action="#" method="post" enctype="multipart/form-data">
+                    <!-- <form class="form-horizontal" role="form"  method="POST" enctype="multipart/form-data"> -->
                         <h4>Poster ici !</h4>
                         <div class="form-group" style="padding:14px;">
-                            <textarea name="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
+                            <textarea id="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
                         </div>
                         <?= $erreurMessage ?>
-                        <input type="submit" class="btn btn-primary pull-right" name="post" value="post">
+                        <input type="submit" class="btn btn-primary pull-right" onclick="postImage()" id="post"  value="post">
 
                         <div class="form-group">
                             <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
@@ -78,7 +78,7 @@
                         <?= $erreurImage ?>
 
 
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
 
