@@ -43,6 +43,8 @@ if (isset($_POST["message"])) {
         }
     }
 
+
+
     EDatabase::begintransaction();
 
 
@@ -50,9 +52,14 @@ if (isset($_POST["message"])) {
         $lastIdPost = ajouterPost($message);
     }
 
-    for ($i = 0; $i < count($_FILES["img"]["size"]); $i++) {
-        $sumFichier += $_FILES["img"]["size"][$i];
+
+
+    if (isset(($_FILES["img"]))) {
+        for ($i = 0; $i < count($_FILES["img"]["size"]); $i++) {
+            $sumFichier += $_FILES["img"]["size"][$i];
+        }
     }
+
     if ($sumFichier != 0) {
         foreach ($_FILES["img"]["error"] as $key => $error) {
             // Vérifie si le téléchargement du fichier s'est déroulé sans erreur
@@ -128,11 +135,13 @@ if (isset($_POST["message"])) {
             EDatabase::rollback();
         } else {
             EDatabase::commit();
-            echo '{ "ReturnCode": 0, "Message": "Nom et mot de passe correspondent."}';
+
+            echo '{ "ReturnCode": 0, "validation": "Post upload"}';
 
             exit();
         }
     } else {
         EDatabase::rollback();
     }
+    exit();
 }

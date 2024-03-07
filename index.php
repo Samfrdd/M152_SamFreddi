@@ -1,10 +1,3 @@
-<!-- /*
-* Nom : index.php
-* Auteur : Sam Freddi 
-* Date : 06.09.2023
-* Version : 1.0
-* Description : index sur site web -> redirection sur le controller
-*/ -->
 
 <?php
 ini_set('display_errors', 1);

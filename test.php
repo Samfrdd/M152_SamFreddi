@@ -35,12 +35,26 @@ echo '{ "ReturnCode": 1, "Message": "Paramètres manquants ou invalides."}';
 
 ?>
 
-<form action="#" method="POST">
-    <span>Nom d'utilisateur: </span><input type="text" id="username"></input>
-    <br>
-    <span>Mot de passe: </span><input type="password" id="pswd"></input>
-    <input type="button" id="send" value="Login"></input>
-</form>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
 
-<script src="./test.js"></script>
+<body>
+
+    <form id="imageForm" enctype="multipart/form-data">
+        <input type="file" name="image" id="imageInput" accept="image/*">
+        <button type="button" onclick="uploadImage()">Upload</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="./test.js"></script>
+
+</body>
+
+</html>
