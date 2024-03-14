@@ -13,7 +13,7 @@ require_once './modele/delete.php';
 require_once './modele/getMedia.php';
 require_once './modele/insertPost.php';
 
-if (isset($_POST["delete"])) {
+if (isset($_POST["idPost"])) {
     EDatabase::begintransaction();
 
     if (filter_has_var(INPUT_POST, 'idPost')) {
@@ -62,19 +62,27 @@ if (isset($_POST["delete"])) {
                 }
             }
 
-            if ($erreurDeleteMedia && $erreurLink) {
-                // Erreur dans les delete media ou unlink
-                EDatabase::rollback();
+            if ($erreurDeleteMedia) {
+                if ($erreurLink) {
+                    // Erreur dans les delete media ou unlink
+                    EDatabase::commit();
+                    echo '{ "ReturnCode": 0, "validation": "Post deleted"}';
+                    exit();
+                } else {
+                    EDatabase::rollback();
+                }
             } else {
-                
                 EDatabase::commit();
+                echo '{ "ReturnCode": 0, "validation": "Post deleted"}';
 
+                exit();
             }
         } else {
             // erreur delete post
             EDatabase::rollback();
         }
     } else {
+        // erreur delete post
         EDatabase::rollback();
     }
 }

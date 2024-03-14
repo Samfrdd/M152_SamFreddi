@@ -63,24 +63,22 @@
         <div class="padding">
             <div class="full col-sm-12">
                 <div class="well ">
-                    <!-- <form class="form-horizontal" role="form"  method="POST" enctype="multipart/form-data"> -->
-                    <h4>Poster ici !</h4>
-                    <div class="form-group" style="padding:14px;">
-                        <textarea id="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
-                    </div>
-                    <?= $erreurMessage ?>
-                    <input type="submit" class="btn btn-primary pull-right" onclick="postImage()" id="post" value="post">
+                    <form class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+                        <h4>Poster ici !</h4>
+                        <div class="form-group" style="padding:14px;">
+                            <textarea name="message" id="message" class="form-control" placeholder="Ecrivez votre post ici !"></textarea>
+                        </div>
+                        <?= $erreurMessage ?>
+                        <input type="submit" name="post" class="btn btn-primary pull-right" id="post" value="post">
 
-                    <div class="form-group">
-                        <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
-                        <form id="imageForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <!-- <label for="img"><i class="glyphicon glyphicon-upload"></i></label> -->
+
                             <input type="file" name="img[]" id="img" multiple accept="image/*,video/* ,audio/*">
-                        </form>
-                    </div>
-                    <?= $erreurImage ?>
 
-
-                    <!-- </form> -->
+                        </div>
+                        <?= $erreurImage ?>
+                    </form>
                 </div>
             </div>
 

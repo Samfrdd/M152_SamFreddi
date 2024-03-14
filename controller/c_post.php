@@ -29,6 +29,7 @@ $sumFichier = 0;
 // Quand on clique sur "Envoyé"
 if (isset($_POST["message"])) {
 
+
     // Vérification du champs mdp
     if (filter_has_var(INPUT_POST, 'message')) {
         if (strlen($_POST['message']) > 0 && strlen($_POST['message']) < 200) {
@@ -43,16 +44,12 @@ if (isset($_POST["message"])) {
         }
     }
 
-
-
     EDatabase::begintransaction();
 
 
     if ($erreurMessage == "") {
         $lastIdPost = ajouterPost($message);
     }
-
-
 
     if (isset(($_FILES["img"]))) {
         for ($i = 0; $i < count($_FILES["img"]["size"]); $i++) {
@@ -135,13 +132,10 @@ if (isset($_POST["message"])) {
             EDatabase::rollback();
         } else {
             EDatabase::commit();
-
-            echo '{ "ReturnCode": 0, "validation": "Post upload"}';
-
-            exit();
+            header("Location: ?page=home");
         }
     } else {
         EDatabase::rollback();
     }
-    exit();
+    
 }

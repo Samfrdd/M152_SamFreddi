@@ -7,61 +7,37 @@ window.addEventListener('load', (event) => {
 });
 
 
-function postImage() {
-    console.log("post");
+function deletePost(idPost) {
+    console.log("deletePost");
 
     // On va vérifier que les champs sont remplis
-    var message = document.getElementById("message");
-    var imgFile = document.getElementById("img");
-    var formData = new FormData();
-
-    if (message.value.length == 0) {
-        // On met par exemple le broder en rouge
-        message.style.borderColor = "red";
-        // Mettre le focus sur le champ mot de passe
-        message.focus();
-        // Fail, pas la peine de continuer
-        return;
-    }
-    else {
-        message.style.borderColor = "";
-    }
 
 
-    if (imgFile.files.length > 0) {
-        for (let index = 0; index < imgFile.files.length; index++) {
-            formData.append('img', imgFile.files[index]);
-
-        }
-
-    }
-    // Make a fetch request
-    imgFile.style.borderColor = "";
 
     // On cache les erreurs précédentes, s'il y en a eu
 
     // Lancer la requête ajax
-    formData.append("message", message.value);
-    makeRequestPost(message.value, formData);
+    makeRequestDelete(idPost);
 
-}//#end validateLogin
-
+    //#end validateLogin
+}
 /**
  * Exécuter la requête ajax pour valider l'utilisateur et son mot de passe
  *
  * @param string username   L'email de l'utilisateur
  * @param string pswd       Le mot de passe associé
  */
-function makeRequestPost(message, formData) {
+function makeRequestDelete(idPost) {
     var jsonObj = {};
-    jsonObj.message = message;
-    jsonObj.formData = formData;
+    jsonObj.idPost = idPost;
     let searchParams = new URLSearchParams(jsonObj);
 
-    fetch('http://localhost/M152/?page=post', {
-        method: 'POST',
-
-        body: formData
+    fetch('http://localhost/M152/', {
+        method: 'POST', // or GET
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: searchParams.toString()
     })
         .then(response => response.json())
         .then(data => {
@@ -73,10 +49,10 @@ function makeRequestPost(message, formData) {
                     break;
                 case 1: // Paramètres invalides
                     // On affiche le message d'erreur
-
+                    document.getElementById("errorParam").style.display = "block";
                     break;
                 case 2: // User et/ou mot de passe invalide
-
+                    document.getElementById("errorLogin").style.display = "block";
                     break;
             }
         })

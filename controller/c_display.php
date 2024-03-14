@@ -67,13 +67,13 @@ foreach ($allPost as $key => $post) {
     $div .= '<p>' . $post->dateCreation . '</p>';
     $div .= '</div>';
 
-    $div .= '<form action="#" method="POST"><button type="submit" class="btn-icon" name="delete" value="delete"><i class="fa-solid fa-circle-xmark"></i></button>';
+    $div .= '<button type="submit" class="btn-icon" name="delete" onclick="deletePost(' . $post->id . ')" value="delete"><i class="fa-solid fa-circle-xmark"></i></button>';
     $div .= '<input type="hidden" name="idPost" value="' . $post->id . '"></input>';
-    $div .= '</form>';
+    $div .= '';
 
 
 
-    $div .= '<a class="btn" href="?page=modification&id=' . $post->id . '" role="button" data-toggle="modal"><i class="fa-solid fa-pen"></i>';
+    $div .= '<a class="btn" href="?page=modification&id=' . $post->id . '" role="button" data-toggle="modal"><i class="fa-solid fa-pen"></i></a>';
 
     $div .= '</div>';
 }

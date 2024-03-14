@@ -16,11 +16,6 @@
 	<div class="wrapper">
 		<div class="box">
 			<div class="row row-offcanvas row-offcanvas-left">
-
-		
-				
-				
-
 				<!-- main right col -->
 				<div class="column col-sm-12 col-xs-12" id="main">
 
