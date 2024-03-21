@@ -1,5 +1,11 @@
 <?php
-
+/*
+* Nom : insertPost.php
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+* Description : insert les info dans la bdd
+*/
 
 
 function ajouterPost($message)

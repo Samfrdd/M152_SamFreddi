@@ -1,14 +1,20 @@
 <?php
 
-
+/*
+* Nom : delete.php
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+* Description : Page pour delete les informations
+*/
 
 
 
 /**
- * Fonction  qui  supprime l'utlisateur
+ * Fonction  qui  supprime l'un post
  *
- * @param string $pseudo
- * @return void
+ * @param string $idPost
+ * @return bool
  */
 function deletePost($idPost)
 {

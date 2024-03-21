@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Auteur : Sam Freddi
+ * Date : 21.03.2024
+ * Descrition : Page controlleur display, gère l'affichage de tous les post
+ * Version 1.0
+ */
 require_once './modele/getPost.php';
 require_once './modele/getMedia.php';
 

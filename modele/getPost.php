@@ -1,5 +1,13 @@
 <?php
 
+/*
+* Nom : getPost.php
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+* Description : Page pour get les post
+*/
+
 class EPost
 {
 

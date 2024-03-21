@@ -1,4 +1,12 @@
 <?php
+/*
+* Nom : getMedia.php
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+* Description : Page pour get les media
+*/
+
 
 class EMedia
 {

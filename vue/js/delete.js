@@ -1,5 +1,10 @@
-// On ajoute une call-back qui sera appelée une fois le document 
-// complètement chargé par le navigateur
+/*
+* Nom : delete.js
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+*/
+
 window.addEventListener('load', (event) => {
     // On ajoute une call-back sur le click du bouton Login
 

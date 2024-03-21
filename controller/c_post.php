@@ -1,4 +1,10 @@
 <?php
+/**
+ * Auteur : Sam Freddi
+ * Date : 21.03.2024
+ * Descrition : Page controlleur post, gère le post du l'utilisateur
+ * Version 1.0
+ */
 require_once './modele/db/database.php';
 
 
@@ -124,7 +130,7 @@ if (isset($_POST["message"])) {
                                         imagesavealpha($image_resized, true);
                                     }
 
-                                        
+
                                     imagecopyresampled($image_resized, $image_source, 0, 0, 0, 0, intval($nouvelle_largeur), intval($nouvelle_hauteur), imagesx($image_source), imagesy($image_source));
 
                                     $isMoved[$key] = imagejpeg($image_resized, "$uploads_dir/$name" . "_FormatRedimensionne." . $type[$lastId], 100);

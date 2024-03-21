@@ -1,4 +1,10 @@
-// On ajoute une call-back qui sera appelée une fois le document 
+/*
+* Nom : post.js
+* Auteur : Sam Freddi 
+* Date : 06.09.2023
+* Version : 1.0
+*/
+
 // complètement chargé par le navigateur
 window.addEventListener('load', (event) => {
     // On ajoute une call-back sur le click du bouton Login

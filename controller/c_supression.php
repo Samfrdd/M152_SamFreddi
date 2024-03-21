@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Auteur : Sam Freddi
+ * Date : 21.03.2024
+ * Descrition : Page supression , gère la supression du l'utilisateur
+ * Version 1.0
+ */
+
 $idPost = "";
 $erreurSupression = "";
 $uploads_dir = './vue/imgPost/';

@@ -1,4 +1,12 @@
 <?php
+/**
+ * Auteur : Sam Freddi
+ * Date : 21.03.2024
+ * Descrition : Page modification, gère la modification de l'utilisateur
+ * Version 1.0
+ */
+
+
 $idMedia = "";
 $idPost = "";
 $erreurModification = "";
