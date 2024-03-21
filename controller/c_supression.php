@@ -29,13 +29,8 @@ if (isset($_POST["idPost"])) {
         }
     }
 
-
-
-
     if ($erreurSupression == "") {
         $mediaByPost =  getMediaByIdPost($idPost);
-
-
 
         foreach ($mediaByPost as $key => $media) {
             $isUnlink[$key] = unlink($uploads_dir . $media->nom . $media->type);
@@ -44,10 +39,6 @@ if (isset($_POST["idPost"])) {
         }
 
         $isPostDelete = deletePost($idPost);
-
-
-
-
 
         if ($isPostDelete) {
             foreach ($isUnlink as $key => $value) {

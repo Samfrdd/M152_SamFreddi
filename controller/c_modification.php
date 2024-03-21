@@ -101,6 +101,12 @@ if (isset($_POST["deletePhoto"])) {
     if ($erreurDeletePhoto == "") {
         if ($isUnlink && $isMediaDeleted) {
             EDatabase::commit();
+            $erreurDeletePhoto = '<div class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-square-fill "></i>
+            <div class="mx-3">
+            Supression d image réussi !
+            </div>
+        </div>';
         } else {
             EDatabase::rollback();
         }
@@ -152,8 +158,9 @@ if (isset($_POST["modify"])) {
                             $name = uniqid();
 
                             $image = true;
-
                             $lien_image_original = $uploads_dir . "/" . $name . "_original." . $type[$lastId];
+
+                           
                             // Image original
                             // Déplace le fichier téléchargé vers le répertoire de destination avec un nom unique
                             $isMoved[$key] = move_uploaded_file($tmp_name, "$uploads_dir/$name" . "_original." . $type[$lastId]);
@@ -201,7 +208,7 @@ if (isset($_POST["modify"])) {
     }
 
 
-    if ($idPost) {
+    if ($isModifiy) {
         foreach ($isMoved as $key => $value) {
             if (!$value) {
                 $erreur = true;
@@ -212,6 +219,12 @@ if (isset($_POST["modify"])) {
             EDatabase::rollback();
         } else {
             EDatabase::commit();
+            $erreurImage = '<div class="alert alert-success d-flex align-items-center" role="alert">
+            <i class="bi bi-exclamation-square-fill "></i>
+            <div class="mx-3">
+            Opération réussi !
+            </div>
+        </div>';
         }
     } else {
         EDatabase::rollback();
